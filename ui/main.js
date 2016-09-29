@@ -10,3 +10,17 @@ function moveRight () {
 img.onclick= function () {
     var interval = setInterval(moveRight, 50);
 };
+var commInput = document.getElementById('comment');
+var comm = commInput.value;
+var submit = document.getElementById('submit');
+submit.onclick = function () {
+
+    var comms = ['comm1', 'comm2', 'comm3'];
+    var list = "";
+    for (var i=0; i<comms.length; i++){
+        list += '<li>' + comms[i] + '</li>';
+        
+    }
+    var ul = document.getElementById('commlist');
+        ul.innerHTML = list;
+};
